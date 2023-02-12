@@ -418,3 +418,36 @@ RESOURCE
     display: flex;
     padding-right: 250px;
 }
+
+
+/* 
+
+PHP FORM VALIDATION > CONTACT ME 
+
+*/
+
+.Form__title {
+    text-align: center;
+    padding-top: 100px;
+        font-size: 40px;
+            font-weight: 300;
+            color: #fff;
+            text-shadow: 0 0 5px #c2caca,
+                0 0 25px #dee4e5,
+                0 0 50px #f40303,
+                0 0 100px #f40333;
+}
+
+.Form__inbox {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.Form__submit {
+    max-width: 80px;
+}
