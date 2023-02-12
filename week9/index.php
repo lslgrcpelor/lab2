@@ -253,7 +253,7 @@
             }
             ?>
 
-            <h2 class="Form__title"  >Contact Me!</h2>
+            <h2 class="Form__title">Contact Me!</h2>
             <form class="Form__inbox" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 Name: <input type="text" name="name" value="<?php echo $name; ?>">
                 <span class="error">* <?php echo $nameErr; ?></span>
@@ -276,6 +276,7 @@
             </form>
 
             <?php
+            echo "<h2>Your Input:</h2>";
             echo $name;
             echo "<br>";
             echo $email;
