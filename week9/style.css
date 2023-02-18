@@ -418,3 +418,26 @@ RESOURCE
     display: flex;
     padding-right: 250px;
 }
+
+
+/*
+
+FORM - PHP 
+
+
+*/
+
+.Form__php {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 160px;
+}
+
+.Form__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
