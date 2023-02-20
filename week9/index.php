@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -315,23 +315,7 @@
             </div>
         </footer>
     </div>
-
-</body>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leslie's</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./"></script>
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <!--Bom Alert [3]-->
+ <!--Bom Alert [3]-->
 
     <script>
         alert(`Accept cookies`)
@@ -561,7 +545,7 @@
             }
         }
 
-        function test_input($data)
+        function test_input($data) {
         {
             $data = trim($data);
             $data = stripslashes($data);
