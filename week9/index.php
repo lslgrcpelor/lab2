@@ -306,12 +306,8 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $name = $_POST["name"];
-                $email = $_POST["email"];
-                $website = $_POST["website"];
-
-                $sql = "INSERT INTO MyGuests (firstname, email, website)
-            VALUES ('$name', '$email', '$website')";
+                $sql = "INSERT INTO MyGuests (name,email, website,comment,gender)
+	                    VALUES ('$name', '$email','$website','$comment','$gender')";
 
                 if ($conn->query($sql) === TRUE) {
                     echo "New record created successfully";
@@ -323,6 +319,7 @@
             }
 
             ?>
+
 
         </div>
     </div>
