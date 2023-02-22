@@ -300,14 +300,23 @@
                 $dbname = "testdb";
 
                 // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
+                $conn = new mysqli(
+                    $servername,
+                    $username,
+                    $password,
+                    $dbname
+                );
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-	        VALUES ('$name', '$website', '$email')";
+                $name = $_POST["name"];
+                $email = $_POST["email"];
+                $website = $_POST["website"];
+
+                $sql = "INSERT INTO MyGuests (firstname, email, website)
+            VALUES ('$name', '$email', '$website')";
 
                 if ($conn->query($sql) === TRUE) {
                     echo "New record created successfully";
