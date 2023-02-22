@@ -322,9 +322,9 @@
 
             <?php
             $servername = "localhost";
-            $username = "username";
-            $password = "password";
-            $dbname = "myDB";
+            $username = "webprogmi212";
+            $password = "webprogmi212";
+            $dbname = "webprogmi212";
 
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
