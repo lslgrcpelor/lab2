@@ -287,6 +287,40 @@
             echo "<br>";
             echo $gender;
             ?>
+
+            <?php
+            //From mysql_insert.php
+            // if statement below is for the MySQL insert code to execute only AFTER the submit button is pressed
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "testdb";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "INSERT INTO MyGuests (firstname, lastname, email)
+	        VALUES ('$name', '$website', '$email')";
+
+                if ($conn->query($sql) === TRUE) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+
+                $conn->close();
+            }
+
+            ?>
+
+
         </div>
     </div>
     <!--Footer-->
