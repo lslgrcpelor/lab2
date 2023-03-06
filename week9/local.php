@@ -9,6 +9,8 @@
 </head>
 
 <body>
+
+
     <?php
     $servername = "localhost";
     $username = "root";
@@ -35,6 +37,8 @@
     }
     $conn->close();
    ?>
+
+
 </body>
 
 </html>
