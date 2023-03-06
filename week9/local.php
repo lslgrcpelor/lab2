@@ -12,7 +12,7 @@
 
 
     <?php
-    $servername = "%";
+    $servername = "webprogmi212";
     $username = "webprogmi212";
     $password = "b3ntRhino98";
     $dbname = "lppelor_myguests";
