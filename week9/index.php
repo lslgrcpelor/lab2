@@ -289,10 +289,16 @@
             ?>
 
             <?php
-            //From mysql_insert.php
-            // if statement below is for the MySQL insert code to execute only AFTER the submit button is pressed
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $id = $_POST['id'];
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $website = $_POST['website'];
+                $comment = $_POST['comment'];
+                $gender = $_POST['gender'];
+                $reg_date = date("Y-m-d H:i:s");
+
 
                 $servername = "192.168.150.213";
                 $username = "webprogmi212";
@@ -306,23 +312,18 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-                VALUES ('John', 'Doe', 'john@example.com');";
-                $sql .= "INSERT INTO MyGuests (firstname, lastname, email)
-                   VALUES ('Mary', 'Moe', 'mary@example.com');";
-                $sql .= "INSERT INTO MyGuests (firstname, lastname, email)
-                 VALUES ('Julie', 'Dooley', 'julie@example.com')";
+                $sql = "INSERT INTO lppelor_myguests (id, name, email, website, comment, gender, reg_date)
+                        VALUES ('$id', '$name', '$email', '$website', '$comment', '$gender', '$reg_date')";
 
-                if ($conn->multi_query($sql) === TRUE) {
-                    echo "New records created successfully";
+
+                if ($conn->query($sql) === TRUE) {
+                    echo "Account Created!";
                 } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
 
                 $conn->close();
             }
-
-
 
             ?>
 
