@@ -312,8 +312,8 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "INSERT INTO lppelor_myguests (id, name, email, website, comment, gender, reg_date)
-                        VALUES ('$id', '$name', '$email', '$website', '$comment', '$gender', '$reg_date')";
+                $sql = "INSERT INTO lppelor_myguests (name, email, website, comment, gender, reg_date)
+                        VALUES ('$name', '$email', '$website', '$comment', '$gender', '$reg_date')";
 
 
                 if ($conn->query($sql) === TRUE) {
