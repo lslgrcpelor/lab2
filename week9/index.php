@@ -291,7 +291,9 @@
             <?php
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $id = $_POST['id'];
+                if (isset($_POST['id'])) {
+                    $id = $_POST['id'];
+                }
                 $name = $_POST['name'];
                 $email = $_POST['email'];
                 $website = $_POST['website'];
@@ -299,22 +301,20 @@
                 $gender = $_POST['gender'];
                 $reg_date = date("Y-m-d H:i:s");
 
-
                 $servername = "192.168.150.213";
                 $username = "webprogmi212";
                 $password = "b3ntRhino98";
                 $dbname = "webprogmi212";
 
                 // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
+                $conn = new mysqli($servername, $username, $password, $dbname);
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
                 $sql = "INSERT INTO lppelor_myguests (name, email, website, comment, gender, reg_date)
-                        VALUES ('$name', '$email', '$website', '$comment', '$gender', '$reg_date')";
-
+            VALUES ('$name', '$email', '$website', '$comment', '$gender', '$reg_date')";
 
                 if ($conn->query($sql) === TRUE) {
                     echo "Account Created!";
