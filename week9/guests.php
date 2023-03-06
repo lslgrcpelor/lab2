@@ -15,7 +15,7 @@
     $servername = "192.168.150.213";
     $username = "webprogmi212";
     $password = "b3ntRhino98";
-    $dbname = "webprogmi212";
+    $dbname = "lppelor_myguests";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -30,7 +30,12 @@
     if ($result->num_rows > 0) {
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"] . " - Name: " . $row["name"] . " " . $row["email"] . $row["website"] . $row["comment"] . $row["gender"] . "<br>";
+            echo "ID: " . $row["id"] . " - " .
+                "Name: " . $row["name"] . "<br>" .
+                "Email: " . $row["email"] . "<br>" .
+                "Website: " . $row["website"] . "<br>" .
+                "Comment: " . $row["comment"] . "<br>" .
+                "Gender: " . $row["gender"] . "<br><br>";
         }
     } else {
         echo "0 results";
