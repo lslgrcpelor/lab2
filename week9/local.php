@@ -16,6 +16,7 @@
     $username = "webprogmi212";
     $password = "b3ntRhino98";
     $dbname = "webprogmi212";
+    $dbname = "lppelor_myguests";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
