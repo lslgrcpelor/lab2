@@ -24,7 +24,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT name, email, website, comment, gender, reg_date FROM myguests";
+    $sql = "SELECT id, name, email, website, comment, gender, reg_date FROM lppelor_myguests";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
