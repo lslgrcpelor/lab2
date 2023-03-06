@@ -327,6 +327,8 @@
 
             ?>
 
+            <?php include 'guests.php'; ?>
+
         </div>
     </div>
     <!--Footer-->
